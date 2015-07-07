@@ -35,6 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/BoostGraph.o \
 	${OBJECTDIR}/DataPoint.o \
 	${OBJECTDIR}/Example.o \
 	${OBJECTDIR}/GetDuringTIme.o \
@@ -69,6 +70,11 @@ LDLIBSOPTIONS=
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/study: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/study ${OBJECTFILES} ${LDLIBSOPTIONS}
+
+${OBJECTDIR}/BoostGraph.o: BoostGraph.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/BoostGraph.o BoostGraph.cpp
 
 ${OBJECTDIR}/DataPoint.o: DataPoint.cpp 
 	${MKDIR} -p ${OBJECTDIR}
