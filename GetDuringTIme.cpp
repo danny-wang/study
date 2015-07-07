@@ -28,11 +28,15 @@ timeval_subtract(timeval *result, timeval *x, timeval *y)
     return x->tv_sec < y->tv_sec;
 }
 
+
+//how to use this function
+/*
 timeval begin, end, result;
 
 gettimeofday(&begin, NULL);
 
-  gettimeofday(&end, NULL);
-    timeval_subtract(&result, &end, &begin);
-    cout << "Total time: " << result.tv_sec * pow(10.0, 6.0) + result.tv_usec << " ms" << endl;
-    cout << "Average time: " << (result.tv_sec * pow(10.0, 6.0) + result.tv_usec) / (numOfRules) << "ms" << endl;
+gettimeofday(&end, NULL);
+timeval_subtract(&result, &end, &begin);
+cout << "Total time: " << result.tv_sec * pow(10.0, 6.0) + result.tv_usec << " ms" << endl;
+cout << "Average time: " << (result.tv_sec * pow(10.0, 6.0) + result.tv_usec) / (numOfRules) << "ms" << endl;
+*/
