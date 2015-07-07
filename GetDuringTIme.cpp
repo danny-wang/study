@@ -1,4 +1,4 @@
-
+// GetDuringTime
 #include <math.h>
 #include <sys/time.h>
 
