@@ -15,6 +15,7 @@
 #include <unistd.h>
 #include <boost/shared_ptr.hpp>
 #include <pthread.h>
+#include "Example.h"
 using namespace std;
 using namespace boost;
 
@@ -22,11 +23,12 @@ void* thread( void *ptr )
 {
     int i;
     for(i=0;i<3;i++)
-        cout<<"This is a pthread.\n";
+    cout<<"This is a pthread.\n";
 }
+
 int main()
 {
-    pthread_t id;
+   /* pthread_t id;
     int i,ret;
     ret=pthread_create(&id,NULL,thread, NULL);
     if(ret!=0)
@@ -40,7 +42,8 @@ int main()
         cout<<"This is the main process.\n";
     }
    pthread_join(id,NULL);
-   
+   */
+    
     return 0;
     
 }
