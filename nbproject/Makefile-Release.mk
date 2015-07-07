@@ -37,6 +37,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/DataPoint.o \
 	${OBJECTDIR}/GetDuringTIme.o \
+	${OBJECTDIR}/Log.o \
 	${OBJECTDIR}/Noisy.o \
 	${OBJECTDIR}/Student.o \
 	${OBJECTDIR}/Student1.o \
@@ -77,6 +78,11 @@ ${OBJECTDIR}/GetDuringTIme.o: GetDuringTIme.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/GetDuringTIme.o GetDuringTIme.cpp
+
+${OBJECTDIR}/Log.o: Log.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Log.o Log.cpp
 
 ${OBJECTDIR}/Noisy.o: Noisy.cpp 
 	${MKDIR} -p ${OBJECTDIR}

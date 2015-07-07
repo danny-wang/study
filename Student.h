@@ -26,6 +26,14 @@ public:
         cout<<" name: "<<name<<endl;
         cout<<" sex: "<<sex<<endl;
     }
+    int getNum()
+    {
+        return num;
+    }
+    void setNum(int i)
+    {
+        this->num=i;
+    }
 private:
     int num;
     string name;

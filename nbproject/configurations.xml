@@ -5,6 +5,7 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>DataPoint.h</itemPath>
+      <itemPath>Log.h</itemPath>
       <itemPath>Noisy.h</itemPath>
       <itemPath>Student.h</itemPath>
       <itemPath>Student1.h</itemPath>
@@ -19,6 +20,7 @@
                    projectFiles="true">
       <itemPath>DataPoint.cpp</itemPath>
       <itemPath>GetDuringTIme.cpp</itemPath>
+      <itemPath>Log.cpp</itemPath>
       <itemPath>Noisy.cpp</itemPath>
       <itemPath>Student.cpp</itemPath>
       <itemPath>Student1.cpp</itemPath>
@@ -78,6 +80,10 @@
       </item>
       <item path="GetDuringTIme.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="Log.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Log.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Noisy.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Noisy.h" ex="false" tool="3" flavor2="0">
@@ -122,6 +128,10 @@
       <item path="DataPoint.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="GetDuringTIme.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Log.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Log.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Noisy.cpp" ex="false" tool="1" flavor2="0">
       </item>
