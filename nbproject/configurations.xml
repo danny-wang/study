@@ -58,6 +58,7 @@
           <commandLine>-lpthread</commandLine>
         </ccTool>
         <linkerTool>
+          <output>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/study</output>
           <linkerLibItems>
             <linkerLibProjectItem>
               <makeArtifact PL="../TrceUnitTestLIb"
@@ -75,6 +76,8 @@
         </linkerTool>
       </compileType>
       <item path="BoostGraph.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="CopyFile.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="DataPoint.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -107,6 +110,8 @@
       <item path="Urand.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="shared_ptr_example.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -131,6 +136,8 @@
       </compileType>
       <item path="BoostGraph.cpp" ex="false" tool="1" flavor2="0">
       </item>
+      <item path="CopyFile.cpp" ex="false" tool="1" flavor2="0">
+      </item>
       <item path="DataPoint.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="DataPoint.h" ex="false" tool="3" flavor2="0">
@@ -162,6 +169,8 @@
       <item path="Urand.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="shared_ptr_example.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
   </confs>

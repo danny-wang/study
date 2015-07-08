@@ -1,59 +1,30 @@
-#include <boost/shared_ptr.hpp>
-#include <vector>
-#include <set>
-#include <iostream>
-#include <algorithm>
-
-using namespace boost;
-
-
-struct Foo
-{
-    Foo(int _x):x(_x){}
-    ~Foo(){std::cout<<"Destructing a Foo with x="<<x<<std::endl;}
-    int x;
-};
-
-typedef shared_ptr<Foo> FooPtr;
-
-struct FooPtrOps
-{
-    bool operator()(const FooPtr &a,const FooPtr &b)
-    {
-        return a->x>b->x;
-    }
-    void operator()(const FooPtr &a)
-    {
-        std::cout<<a->x<<std::endl;
-    }
-};
-int main()
-{
-    std::vector<FooPtr>   foo_vector;
-    std::set<FooPtr,FooPtrOps>  foo_set;
-    
-    FooPtr foo_ptr(new Foo(2));
-    foo_vector.push_back(foo_ptr);
-    foo_set.insert(foo_ptr);
-    
-    foo_ptr.reset(new Foo(1));
-    foo_vector.push_back(foo_ptr);
-    foo_set.insert(foo_ptr);
-    
-     foo_ptr.reset(new Foo(3));
-    foo_vector.push_back(foo_ptr);
-    foo_set.insert(foo_ptr);
-    
-     foo_ptr.reset(new Foo(2));
-    foo_vector.push_back(foo_ptr);
-    foo_set.insert(foo_ptr);
-    
-    std::cout<<"foo_vector:\n";
-    std::for_each(foo_vector.begin(),foo_vector.end(),FooPtrOps());
-    
-    std::cout<<"\nfoo_set:\n";
-    std::for_each(foo_set.begin(),foo_set.end(),FooPtrOps());
-    std::cout<<std::endl;
-    return 0;
-}
-
+#include <iostream>  
+#include <fcntl.h>  
+#include <sys/types.h>  
+#include <sys/stat.h>  
+#include <unistd.h>  
+using namespace std;  
+  
+int main(int argc, char *argv[])  
+{  
+    if(access(argv[1], F_OK) != 0)  
+    {  
+    cout << "file not found......" << endl;  
+    return 0;  
+    }  
+  
+    int fin = open(argv[1], O_RDONLY, 0777);  
+    int fout = open(argv[2], O_WRONLY|O_CREAT, 0777);  
+  
+    char buff[1024] = {'\0'};  
+    int len = 0;  
+    while((len = read(fin, buff, sizeof(buff))) > 0)  
+    {  
+    write(fout, buff, len);  
+    }  
+  
+    close(fin);  
+    close(fout);  
+  
+    return 0;  
+}  

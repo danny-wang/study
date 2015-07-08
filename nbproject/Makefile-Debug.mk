@@ -36,6 +36,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/BoostGraph.o \
+	${OBJECTDIR}/CopyFile.o \
 	${OBJECTDIR}/DataPoint.o \
 	${OBJECTDIR}/Example.o \
 	${OBJECTDIR}/GetDuringTIme.o \
@@ -44,7 +45,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/Student.o \
 	${OBJECTDIR}/Student1.o \
 	${OBJECTDIR}/Urand.o \
-	${OBJECTDIR}/main.o
+	${OBJECTDIR}/main.o \
+	${OBJECTDIR}/shared_ptr_example.o
 
 
 # C Compiler Flags
@@ -77,6 +79,11 @@ ${OBJECTDIR}/BoostGraph.o: BoostGraph.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -I../TrceUnitTestLIb -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/BoostGraph.o BoostGraph.cpp
+
+${OBJECTDIR}/CopyFile.o: CopyFile.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I../TrceUnitTestLIb -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CopyFile.o CopyFile.cpp
 
 ${OBJECTDIR}/DataPoint.o: DataPoint.cpp 
 	${MKDIR} -p ${OBJECTDIR}
@@ -122,6 +129,11 @@ ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -I../TrceUnitTestLIb -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+
+${OBJECTDIR}/shared_ptr_example.o: shared_ptr_example.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I../TrceUnitTestLIb -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/shared_ptr_example.o shared_ptr_example.cpp
 
 # Subprojects
 .build-subprojects:
